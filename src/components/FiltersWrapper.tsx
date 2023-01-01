@@ -13,11 +13,7 @@ export const FiltersWrapper: FC<PropsWithChildren<{}>> = ({ children }) => {
   const [debouncedSearch] = useDebounce(search, 500)
 
   const toggleBodyScrollBehaviour = () => {
-    if (showingFilters) {
-      document.body.style.overflow = 'scroll'
-    } else {
-      document.body.style.overflow = 'hidden'
-    }
+    document.body.style.overflow = showingFilters ? 'scroll' : 'hidden';
   }
 
   return (
